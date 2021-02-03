@@ -11,8 +11,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
+
 public class DownloaderManager {
 
     private List<Video> finishList;
