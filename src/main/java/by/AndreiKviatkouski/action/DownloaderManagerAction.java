@@ -1,18 +1,15 @@
-package by.AndreiKviatkouski.experemental;
+package by.AndreiKviatkouski.action;
 
 import by.AndreiKviatkouski.entyties.Video;
-import by.AndreiKviatkouski.service.Downloader;
-import lombok.AllArgsConstructor;
+import by.AndreiKviatkouski.service.DownloadService;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 @Data
-
-public class DownloaderManager {
+public class DownloaderManagerAction {
 
     private List<Video> finishList;
 
@@ -22,7 +19,7 @@ public class DownloaderManager {
     public void startTreads() {
 
         for (Video video : finishList) {
-            Downloader downloader = new Downloader();
+            DownloadService downloader = new DownloadService();
             Thread thread = new Thread(downloader);
             downloader.setUrl(video.getDownloadLink());
             downloader.setFileName("src\\main\\java\\by\\AndreiKviatkouski\\video2\\" + video.getName());

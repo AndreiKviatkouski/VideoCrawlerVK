@@ -1,4 +1,4 @@
-package by.AndreiKviatkouski.experemental;
+package by.AndreiKviatkouski.action;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

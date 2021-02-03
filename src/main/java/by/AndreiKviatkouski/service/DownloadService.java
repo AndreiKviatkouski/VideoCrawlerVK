@@ -17,7 +17,7 @@ import static by.AndreiKviatkouski.util.ColorScheme.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Downloader implements Runnable {
+public class DownloadService implements Runnable {
 
     String url;
     String fileName;
