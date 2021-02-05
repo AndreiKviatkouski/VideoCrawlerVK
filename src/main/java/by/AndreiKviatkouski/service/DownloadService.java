@@ -48,7 +48,6 @@ public class DownloadService implements Runnable {
 
     @Override
     public void run() {
-        System.out.println(url + " " + "\n" + fileName );
         String threadDescription = Thread.currentThread().getName();
         System.out.println(BLUE + "Starting " + threadDescription);
         downloadVideo();
